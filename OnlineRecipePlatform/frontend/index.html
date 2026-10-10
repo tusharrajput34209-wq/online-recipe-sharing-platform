@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Kitchen | Discover. Cook. Share.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">🍳 Quick<span>Kitchen</span></a>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#recipes">Recipes</a>
+            <a href="#share">Share Recipe</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="eyebrow">YOUR HAPPY PLACE FOR FOOD ✨</span>
+                <h1>Discover. Cook.<br><span>Share Happiness.</span></h1>
+                <p>Find your next favourite dish and bring delicious moments to your kitchen.</p>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="🔍  Search your favourite recipe...">
+                    <button type="button" id="searchButton">Search</button>
+                </div>
+                <a class="explore-link" href="#recipes">Explore recipes ↓</a>
+            </div>
+        </section>
+
+        <section class="recipes-section" id="recipes">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">MADE WITH LOVE</span>
+                    <h2>Popular Recipes <span>🍽️</span></h2>
+                    <p>Something delicious is waiting for you.</p>
+                </div>
+                <span class="recipe-count">Fresh ideas, every day ✨</span>
+            </div>
+
+            <div class="recipe-grid" id="recipeContainer">
+                <article class="recipe-card">
+                    <div class="recipe-image pasta-image">
+    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=900&q=85" alt="Italian pasta">
+</div>
+                    <div class="recipe-info">
+                        <span class="category">ITALIAN FAVOURITE</span>
+                        <h3>Italian Pasta</h3>
+                        <p>A comforting pasta tossed in a delicious tomato sauce.</p>
+                        <div class="recipe-meta"><span>⏱ 25 mins</span><span>🌿 Vegetarian</span></div>
+                        <button type="button" class="view-button" onclick="showRecipe('Italian Pasta', 'Pasta, tomatoes, garlic, olive oil, herbs, cheese', '1. Boil the pasta until tender. 2. Sauté garlic in olive oil. 3. Add tomatoes and herbs. 4. Mix in the pasta, top with cheese and serve.')">View Recipe →</button>
+                    </div>
+                </article>
+
+                <article class="recipe-card">
+                    <div class="recipe-image burger-image">
+    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85" alt="Classic burger">
+</div>
+                    <div class="recipe-info">
+                        <span class="category">QUICK & TASTY</span>
+                        <h3>Classic Burger</h3>
+                        <p>A juicy, flavourful burger with fresh and crunchy veggies.</p>
+                        <div class="recipe-meta"><span>⏱ 20 mins</span><span>🍴 Easy</span></div>
+                        <button type="button" class="view-button" onclick="showRecipe('Classic Burger', 'Burger buns, patty, cheese, lettuce, tomato, onion, sauce', '1. Cook the patty thoroughly. 2. Toast the burger buns. 3. Add sauce, lettuce, tomato, onion and cheese. 4. Place the patty inside, close the bun and serve.')">View Recipe →</button>
+                    </div>
+                </article>
+
+                <article class="recipe-card">
+                    <div class="recipe-image salad-image">
+    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=85" alt="Healthy vegetable salad">
+</div>
+                    <div class="recipe-info">
+                        <span class="category">FRESH & HEALTHY</span>
+                        <h3>Healthy Salad</h3>
+                        <p>A colourful bowl of crisp vegetables and refreshing flavours.</p>
+                        <div class="recipe-meta"><span>⏱ 15 mins</span><span>🌿 Vegetarian</span></div>
+                        <button type="button" class="view-button" onclick="showRecipe('Healthy Salad', 'Cucumber, tomatoes, lettuce, carrots, lemon juice, olive oil, salt and pepper', '1. Wash the vegetables. 2. Chop them into bite-sized pieces. 3. Mix lemon juice, olive oil, salt and pepper. 4. Toss everything together and serve fresh.')">View Recipe →</button>
+                    </div>
+                </article>
+            </div>
+            <p id="noResults" hidden>No recipes found. Try another search! 🍳</p>
+        </section>
+
+        <section class="share-section" id="share">
+            <div class="share-intro">
+                <span class="eyebrow">YOUR RECIPE, YOUR STORY</span>
+                <h2>Share the <span>Love!</span> 💛</h2>
+                <p>Have a recipe everyone loves? Add it here and inspire someone to cook something wonderful.</p>
+                <div class="kitchen-note">Good food. Great mood. <span>🥑 🍅 🥕</span></div>
+            </div>
+
+            <form id="recipeForm" class="recipe-form">
+                <label for="recipeName">Recipe name</label>
+                <input type="text" id="recipeName" placeholder="e.g. Creamy Butter Paneer" required>
+
+                <label for="recipeDescription">Short description</label>
+                <input type="text" id="recipeDescription" placeholder="Tell us what makes it special" required>
+
+                <label for="recipeIngredients">Ingredients</label>
+                <textarea id="recipeIngredients" placeholder="List your ingredients..." rows="3" required></textarea>
+
+                <label for="recipeInstructions">Cooking instructions</label>
+                <textarea id="recipeInstructions" placeholder="Write the steps to make it..." rows="4" required></textarea>
+
+                <button type="submit" class="submit-button">＋ Add My Recipe</button>
+            </form>
+        </section>
+    </main>
+    
+<section id="authSection" style="max-width:500px;margin:30px auto;padding:24px;border-radius:16px;background:#fff7ed;">
+    <h2 id="authTitle">Join Quick Kitchen 🍳</h2>
+    <p id="authMessage">Sign up or log in to share your recipes.</p>
+
+    <form id="authForm">
+        <label for="authEmail">Email</label>
+        <input id="authEmail" type="email"
+            placeholder="Enter your email" required
+            style="display:block;width:100%;padding:12px;margin:8px 0 16px;box-sizing:border-box;">
+
+        <label for="authPassword">Password</label>
+        <input id="authPassword" type="password"
+            placeholder="At least 6 characters"
+            minlength="6" required
+            style="display:block;width:100%;padding:12px;margin:8px 0 16px;box-sizing:border-box;">
+
+        <button type="submit" id="authSubmit" class="submit-button">
+            Sign Up
+        </button>
+
+        <button type="button" id="toggleAuth" style="margin:10px;padding:10px;">
+            Already have an account? Log in
+        </button>
+
+        <button type="button" id="logoutButton" hidden>
+            Log Out
+        </button>
+    </form>
+
+    <p id="authStatus" role="status"></p>
+</section>
+
+
+    <footer>
+        <a href="#home" class="footer-logo">🍳 Quick Kitchen</a>
+        <p>Made with ❤️ for everyone who loves good food.</p>
+        <span>Discover · Cook · Share</span>
+    </footer>
+
+    <div id="recipeModal" class="recipe-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+        <div class="modal-content">
+            <button type="button" id="closeModal" class="close-modal" aria-label="Close recipe details">&times;</button>
+            <span class="eyebrow">LET'S GET COOKING 🍴</span>
+            <h2 id="modalTitle"></h2>
+            <h3>🧺 Ingredients</h3>
+            <p id="modalIngredients"></p>
+            <h3>👩‍🍳 Cooking Instructions</h3>
+            <p id="modalInstructions"></p>
+        </div>
+    </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="backend.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
