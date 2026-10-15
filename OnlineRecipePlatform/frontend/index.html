@@ -161,6 +161,46 @@
             <p id="modalIngredients"></p>
             <h3>👩‍🍳 Cooking Instructions</h3>
             <p id="modalInstructions"></p>
+            
+            <h3>👩‍🍳 Cooking Instructions</h3>
+            <p id="modalInstructions"></p>
+
+          
+            <div class="recipe-reviews">
+                <h3>⭐ Rate This Recipe</h3>
+
+                <div class="rating-stars" id="ratingStars" role="group" aria-label="Choose a rating">
+                    <button type="button" class="rating-star" data-rating="1" aria-label="1 star">★</button>
+                    <button type="button" class="rating-star" data-rating="2" aria-label="2 stars">★</button>
+                    <button type="button" class="rating-star" data-rating="3" aria-label="3 stars">★</button>
+                    <button type="button" class="rating-star" data-rating="4" aria-label="4 stars">★</button>
+                    <button type="button" class="rating-star" data-rating="5" aria-label="5 stars">★</button>
+                </div>
+
+                <p id="selectedRating">Select your rating (1–5)</p>
+
+                <h3>💬 Leave a Comment</h3>
+
+                <form id="reviewForm">
+                    <textarea id="reviewComment" placeholder="Share your experience..." maxlength="1000" rows="4" required></textarea>
+                    <button type="submit" class="submit-button">Submit Review</button>
+                </form>
+
+                <p id="reviewStatus" role="status"></p>
+
+                <div class="existing-reviews">
+                    <h3>What Others Think</h3>
+                    <p id="averageRating">No ratings yet.</p>
+                    <div id="reviewList"></div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
         </div>
     </div>
 

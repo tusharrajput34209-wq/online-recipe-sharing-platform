@@ -58,14 +58,15 @@ ingredients.textContent = recipe.ingredients;
     button.className = "view-button";
     button.textContent = "View Recipe →";
 
-    button.addEventListener("click", function() {
-      showRecipe(
+button.addEventListener("click", function() {
+    showRecipe(
         recipe.title,
         recipe.ingredients,
-        recipe.instructions
-      );
-    });
-    
+        recipe.instructions,
+        recipe.id
+    );
+});
+
     const editButton = document.createElement("button");
     editButton.type = "button";
     editButton.className = "view-button";

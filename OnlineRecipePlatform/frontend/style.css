@@ -591,3 +591,40 @@ footer > span {
 .recipe-card:hover .recipe-image img {
     transform: scale(1.06);
 }
+
+.rating-stars {
+    display: flex;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.rating-star {
+    border: none;
+    background: transparent;
+    color: #c9c9c9;
+    font-size: 34px;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.rating-star:hover {
+    transform: scale(1.15);
+}
+
+.rating-star.active {
+    color: #ff762e;
+}
+
+.review-item {
+    padding: 14px 0;
+    border-bottom: 1px solid #eee5d8;
+}
+
+.review-item p {
+    margin-bottom: 6px;
+}
+
+.review-item small {
+    color: #68776e;
+    font-size: 12px;
+}
